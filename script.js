@@ -13,18 +13,22 @@ const search = () => {
     }
 
     display(results)
-    if (!results.length) { resultBox.innerHTML = '' }
+    if (!results.length) { resultBox.innerHTML = "" }
 
 }
 
 const display = (results) => {
-    const ul = document.createElement('ul')
+    const ul = document.createElement("ul")
     results.forEach(oneItem => {
-        const li = document.createElement('li')
+        const li = document.createElement("li")
         li.textContent = oneItem
         ul.append(li)
+        li.addEventListener("click", function() {
+            input.value = oneItem
+            resultBox.innerHTML = ""
+        })
     })
-    resultBox.innerHTML = ''
+    resultBox.innerHTML = ""
     resultBox.append(ul)
 }
 
