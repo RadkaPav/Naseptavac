@@ -22,7 +22,7 @@ body {
 
 .search-box input {
     flex-grow: 1;
-    padding: 10px 20px;
+    padding: 10px 5px;
     outline: none;
     font-size: 18px;
     border: none;
@@ -63,4 +63,10 @@ button i {
 
 .result-box ul li:hover {
     background-color: rgb(234, 234, 234);
+}
+
+@media only screen and (width <= 650px) {
+    .search {
+        width: 80%;
+    }
 }
